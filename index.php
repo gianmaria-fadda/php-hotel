@@ -56,29 +56,43 @@
     </h1>
 
     <div>
-        <?php
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">NAME</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">parking</th>
+                    <th scope="col">vote</th>
+                    <th scope="col">distance to center</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
             foreach($hotels as $ind => $hotel) {
-                <ul>
-                    <li>
+                <tr>
+                    <td>
                         NAME: <?php echo $hotels[$i]['name']; ?>
-                    </li>
-                    <li>
+                    </td>
+                    <td>
                         Description: <?php echo $hotels[$i]['description']; ?>
-                    </li>
-                    <li>
+                    </td>
+                    <td>
                         parking: <?php echo $hotels[$i]['parking'] == true ? 'Si' : 'No'; ?>
-                    </li>
-                    <li>
+                    </td>
+                    <td>
                         Vote: <?php echo $hotels[$i]['vote']; ?>
-                    </li>
-                    <li>
+                    </td>
+                    <td>
                         distance to center: <?php echo $hotels[$i]['distance_to_center']; ?>
-                    </li>
-                </ul>
+                    </td>
+                </tr>
 
                 <hr>
             }
         ?>
+            </tbody>
+        </table>
     </div>
 
 </body>
